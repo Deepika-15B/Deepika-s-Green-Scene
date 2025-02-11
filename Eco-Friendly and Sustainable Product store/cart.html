@@ -135,7 +135,7 @@
             <button type="submit" class="btn btn-success">Place Order</button>
         </form>
     </section>
-
+<!-- Order Confirmation Popup -->
 <div id="order-confirmation" class="order-popup">
     <div class="order-popup-content">
         <i class="fa fa-check-circle"></i>
@@ -222,11 +222,12 @@
             });
     
             document.querySelector("#checkout-form form").addEventListener("submit", function (event) {
-                event.preventDefault(); 
+                event.preventDefault(); // Prevent form submission
     
+                // Show order confirmation popup
                 alert("Thank you! Your order has been confirmed.");
     
-        
+                // Clear the cart and hide the checkout form
                 localStorage.removeItem("cart");
                 cart = [];
                 updateCartDisplay();
